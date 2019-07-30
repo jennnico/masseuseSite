@@ -1,0 +1,108 @@
+@purple: #42005e;
+
+body{
+  background: rgba(50, 50, 50, 0.6);
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.parallax{
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  opacity: 0.7;
+  position: relative;
+
+  &.one{
+    background-image: url("/birch.jpg");
+  }
+
+  &.two{
+    background-image: url("/massage.jpg");
+  }
+
+  &:after{
+    background: rgba(50, 50, 50, 0.7);
+    content: "";
+    position: absolute; top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  #home{
+    align-items: center;
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    padding: 30px;
+
+    h1{
+      font-size: 60px;
+    }
+  }//#home
+
+  .navigation{
+    font-weight: bold;
+    padding: 15px;
+    text-align: right;
+
+    a{
+      color: #fff;
+      font-size: 20px;
+      padding: 15px;
+      text-decoration: none;
+
+      &:hover{
+        background: fade(#000, 20%);
+        transition: 5;
+      }
+    }
+  } //navigation
+
+}//parallax
+
+//Global styles
+.heading{
+  font-family: 'Bad Script', sans-serif;
+  text-align: center;
+}
+
+.block{
+  background: @purple;
+
+  .container{
+    height: 500px;
+    padding: 30px 0;
+    margin: auto;
+    width: 90%;
+  }
+}
+//End of Global Styles
+
+.servicios{
+  border: solid 2px #fff;
+  padding: 0;
+
+  li{
+    border-bottom: solid 1px #fff;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+
+    &.title{
+      font-weight: bold;
+    }
+
+    .item{
+      padding: 15px;
+      text-align: center;
+      width: 33%;
+    }
+  }
+}//servicios
