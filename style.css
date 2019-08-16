@@ -1,0 +1,107 @@
+body{
+  text-align: center;
+  background: #eaeaea;
+  margin-top: 1rem;
+  font-family: 'Quicksand', cursive;
+  color: #090d47;
+}
+
+/*navigation bar*/
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  background: #eaeaea;
+  z-index: 1;
+}
+
+.nav li a{
+  display: block;
+  padding: 1rem;
+  color: #090d47;
+  float:right;
+}
+
+.nav li a:hover {
+  background-color: #dbdbdb;
+  text-decoration: none;
+  color: black;
+  transition: .7s background-color;
+}
+
+/*Grey Box*/
+.row{
+  border: double #dbdbdb;
+  height: 25rem;
+  max-width: 65rem;
+  margin-top: 4rem;
+}
+
+/*My name*/
+h1{
+  font-size: 3.5rem;
+  font-family: 'Rufina', cursive;
+  margin-top: 6rem;
+  color: #00102b;
+}
+
+/*My picture*/
+#photo{
+  border-radius: 50%;
+  padding: .5rem;
+  border: 1px solid #dbdbdb;
+  margin-top:2rem;
+  width: 15rem;  
+  animation-name: appear;
+  animation-duration: 4s;
+}
+
+/*Used on images*/
+@keyframes appear{
+  0%{opacity:0;}  
+  100%{opacity:1;}
+}
+
+/*About, Portfolio, Contact: subheadings*/
+.subHeading{
+  margin-top:3rem;
+}
+
+/*About, Portfolio, Contact: content*/
+.info{
+  max-width: 50rem;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+/*Beijing Photo*/
+#china{
+  width: 15rem; 
+  border: 1px solid #dbdbdb;
+  animation-name: appear;
+  animation-duration: 5s;
+}
+
+/*captions*/
+.caption{
+  font-size: .75rem;
+}
+
+/*Portfolio images: container*/
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin-bottom:3rem;
+}
+
+/*Portfolio images: single images*/
+.projects{
+  max-width:20rem;
+  animation-name: appear;
+  animation-duration: 5s;
+}
+
