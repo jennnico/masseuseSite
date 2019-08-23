@@ -46,12 +46,37 @@ body{
 
     .heading{
       font-size: 60px;
-    }
+      font-weight: normal;
+    }//heading
 
     .subheading{
+      align-items: center;
+      display: flex;
+      font-family: 'Cinzel', serif;
       font-size: 30px;
       margin: 0 0 70px;
-    }
+
+      .rhombus{
+        border: 5px solid transparent;
+        border-bottom: 10px solid #fff;
+        width: 0;
+        height: 0;
+        margin: 0 20px;
+        position: relative;
+        top: -10px;
+      }//rhombus
+      .rhombus:after {
+        border: 5px solid transparent;
+        border-top: 10px solid #fff;
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: 10px;
+        width: 0;
+        height: 0;
+      }//rhombus:after
+
+    }//subheading
 
   }//#home
 
@@ -77,9 +102,10 @@ body{
 
 //Global styles
 .heading{
-  font-family: 'Bad Script', sans-serif;
+  font-family: 'Alex Brush', sans-serif;
   font-size: 38px;
-  margin: 0;
+  font-weight: normal;
+  margin: 0 0 50px;
   text-align: center;
 }
 
@@ -122,28 +148,45 @@ body{
 }
 //End of Global Styles
 
-.servicios{
-  border: solid 2px #fff;
-  padding: 0;
-
-  li{
-    border-bottom: solid 1px #fff;
+.services{
+  .content{
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-    width: 100%;
+    justify-content: space-between;
 
-    &.title{
-      font-weight: bold;
+    .img-container{
+      opacity: 0.6;
+      width: 35%;
+
+      img{width: 100%;}
     }
 
-    .item{
-      padding: 15px;
-      text-align: center;
-      width: 33%;
-    }
+    .servicios{
+      //border: solid 2px #fff;
+      padding: 0;
+      width: 57%;
+
+      li{
+        //border-bottom: solid 1px #fff;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        width: 100%;
+
+        &.title{
+          font-weight: bold;
+        }
+
+        .item{
+          padding: 15px;
+          text-align: center;
+          width: 33%;
+        }
+      }
+    }//servicios
   }
-}//servicios
+}
+
+
 
 .about{
   .box{
@@ -154,7 +197,7 @@ body{
           margin: auto;
           width: 35%;
           .lotus{
-            opacity: 0.7;
+            opacity: 0.6;
             width: 100%;}
       }
   }
