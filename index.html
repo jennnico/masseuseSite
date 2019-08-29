@@ -16,19 +16,26 @@
 <!-- Main Header -->
 <header class="parallax one">
   <nav class="navigation">
-    <a href="#home" class="home">Home</a>
-    <a href="#services" class="services">Services</a>
-    <a href="#about" class="about">About</a>
-    <a href="#contact" class="contact">Contact</a>
+    <div class="nav-items">
+      <a href="#home" class="home">Home</a>
+      <a href="#services" class="services">Services</a>
+      <a href="#about" class="about">About</a>
+      <a href="#contact" class="contact">Contact</a>
+    </div>
+    <div class="mobile-menu">
+      <span class="burger"></span>
+      <span class="burger"></span>
+      <span class="burger"></span>
+    </div>
   </nav>
   <div id="home">
-    <h1 class="heading">Caroline Lukosik Massage Therapy</h1>
+    <h1 class="heading">Caroline Lukosik <span>Massage Therapy</span></h1>
     <h2 class="subheading">INTUITIVE <div class="rhombus"></div> DEEP <div class="rhombus"></div> MEDICAL</h2>
     <a href="#contact" class="button">Book an Appointment</a>
   </div>
 </header>
 
-
+<main>
 <!-- Services section -->
 <div class="fade block">
   <div class="container services" id="services">
@@ -71,7 +78,7 @@
 <!-- About section -->
 <div class="fade block">
   <div class="fade container about" id="about">
-      <h2 class="heading">About Diane</h2>
+      <h2 class="heading">About Caroline</h2>
       <div class="box">
         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Vivamus pellentesque efficitur orci, ac dictum lectus finibus vel.
@@ -84,6 +91,8 @@
 </div>
 
 <div class="fade divider"></div>
+
+</main>
 
 <div class="fade block">
   <div class="container contact" id="contact">
@@ -117,4 +126,5 @@
 <!-- Resources:
 Fade-in on scroll: https://codepen.io/obadaa/pen/VQQYpN
 CSS rhombus: css-tricks.com
+Sticky nav: https://www.w3schools.com/howto/howto_js_sticky_header.asp
 -->
