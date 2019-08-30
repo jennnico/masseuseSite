@@ -15,7 +15,8 @@ $(document).ready(function() {
      $('.fade').each( function(i){
 
          var bottom_of_object = $(this).position().top + $(this).outerHeight();
-         var middle_of_object = $(this).position().top + $(this).outerHeight()/2;
+         //var middle_of_object = $(this).position().top + $(this).outerHeight()/2;
+         var middle_of_object = $(this).position().top + 600;
          var bottom_of_window = $(window).scrollTop() + $(window).height();
 
          /* If the object is completely visible in the window, fade it it */
@@ -24,6 +25,10 @@ $(document).ready(function() {
              $(this).animate({'opacity':'1'},800);
 
                nav.addClass("sticky");
+
+         } else{
+
+           nav.removeClass("sticky");
 
          }
 
