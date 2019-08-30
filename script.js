@@ -3,19 +3,15 @@ $(document).ready(function() {
   /* Every time the window is scrolled ... */
   $(window).scroll( function(){
 
+    /*sticky nav*/
     var nav = $('.navigation')
-    // var sticky = nav.offsetTop;
-    // if(window.pageYOffset >= sticky){
-    //   nav.addClass("sticky");
-    // }else{
-    //   nav.removeClass("sticky");
-    // }
+    var $this = $(this);
+    var headerHeight = $('.parallax.one').outerHeight();
 
-    /* If the object is completely visible in the window, fade it it */
-    if(window.pageYOffset > 500 ){
-          nav.addClass("sticky");
+    if($this.scrollTop() > headerHeight - 200){
+        nav.addClass("sticky");
     } else{
-      nav.removeClass("sticky");
+        nav.removeClass("sticky");
     }
 
      /* Check the location of each desired element */
