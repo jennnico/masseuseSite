@@ -1,20 +1,21 @@
 $(document).ready(function() {
 
-  /* Every time the window is scrolled ... */
-  $(window).scroll( function(){
+  $(window).scroll(function(){
 
-    /*sticky nav*/
+    /*Sticky nav*/
     var nav = $('.navigation')
     var $this = $(this);
     var headerHeight = $('.parallax.one').outerHeight();
 
     if($this.scrollTop() > headerHeight - 200){
         nav.addClass("sticky");
+        $('.parallax.one').css("opacity", "0.9")
     } else{
         nav.removeClass("sticky");
-    }
+        $('.parallax.one').css("opacity", "0.7")
+    } /*sticky-nav*/
 
-     /* Check the location of each desired element */
+     /*Fade-in panels*/
      $('.fade').each( function(i){
 
          var bottom_of_object = $(this).position().top + $(this).outerHeight();
@@ -22,43 +23,37 @@ $(document).ready(function() {
          var middle_of_object = $(this).position().top + 200;
          var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-         /* If the object is completely visible in the window, fade it it */
+         /* If the object is partially visible in the window, fade it in */
          if( bottom_of_window > middle_of_object ){
-
              $(this).animate({'opacity':'1'},800);
-
          }
 
-     });  /*fade-in*/
+     });  /*fade-in panels*/
 
   }); /*window scroll*/
 
-//Variables for pagespeed
-var mobileNav = $('.nav-items')
-var rhombus = $('.rhombus')
 
-  //Mobile hamburger click
-  $('.mobile-menu').click(function(){
+//Hamburger
+var mobileNav = $('.nav-items');
+var rhombus = $('.rhombus'); //rhombuses likes to be in the nav
 
-    //toggle mobile nav and rhombuses
-    if((mobileNav).hasClass('mobile-nav')){
-      mobileNav.removeClass('mobile-nav');
-      rhombus.css("display", "inline");
-    }else{
-        mobileNav.addClass('mobile-nav');
-        rhombus.css("display", "none");
+$('.mobile-menu').click(function(){
 
-        //Close nav when the user makes a selection
-        $('a').click(function(){
-          mobileNav.removeClass('mobile-nav');
-          rhombus.css("display", "inline");
-        });
-    }
-  });
+  //toggle mobile nav and rhombuses
+  if((mobileNav).hasClass('mobile-nav')){
+    mobileNav.removeClass('mobile-nav');
+    rhombus.css("display", "inline");
+  }else{
+      mobileNav.addClass('mobile-nav');
+      rhombus.css("display", "none");
 
-  /*Nav needs:
-    X  1. Close nav when the user clicks on a nav item
-      2. Sticky nav
-  */
+      //Close nav when the user makes a selection
+      $('a').click(function(){
+        mobileNav.removeClass('mobile-nav');
+        rhombus.css("display", "inline");
+      });//a element click
+  }//else
+}); //Hamburger
+
 
 })
