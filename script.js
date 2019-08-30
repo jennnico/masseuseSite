@@ -4,12 +4,12 @@ $(document).ready(function() {
   $(window).scroll( function(){
 
     var nav = $('.navigation')
-    var sticky = nav.offsetTop;
-    if(window.pageYOffset >= sticky){
-      nav.addClass("sticky");
-    }else{
-      nav.removeClass("sticky");
-    }
+    // var sticky = nav.offsetTop;
+    // if(window.pageYOffset >= sticky){
+    //   nav.addClass("sticky");
+    // }else{
+    //   nav.removeClass("sticky");
+    // }
 
      /* Check the location of each desired element */
      $('.fade').each( function(i){
@@ -22,6 +22,8 @@ $(document).ready(function() {
          if( bottom_of_window > middle_of_object ){
 
              $(this).animate({'opacity':'1'},800);
+
+               nav.addClass("sticky");
 
          }
 
