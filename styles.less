@@ -80,6 +80,8 @@ body{
   width: 100%;
   z-index: 2;
 
+  @media(max-width: @screen-sm){min-height: 95vh;}
+
   &.one{
     background-image: url("/birch.jpg");
   }//parallax.one
@@ -102,6 +104,8 @@ body{
     justify-content: center;
     padding: 30px;
     text-align: center;
+
+    @media(max-width: @screen-sm){min-height: 70vh;}
 
     .heading{
       font-size: 60px;
