@@ -319,6 +319,7 @@ body{
   .heading{
     @media(max-width: @screen-md){margin-bottom: 12px;}
   }//heading
+
   .schedule{
     display: flex;
     justify-content: center;
@@ -329,6 +330,14 @@ body{
       padding: 30px;
 
       @media(max-width: @screen-md){margin: auto; text-align: center;}
+
+      &:first-of-type{
+          @media(max-width: @screen-xs){padding: 0; width: 100%;}
+
+          iframe{
+            @media(max-width: @screen-xs){width: 100% !important;}
+          }//iframe
+      }//first box
 
       p{margin: 0;}
 
