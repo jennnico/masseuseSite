@@ -43,14 +43,17 @@ $('.mobile-menu').click(function(){
   if((mobileNav).hasClass('mobile-nav')){
     mobileNav.removeClass('mobile-nav');
     rhombus.css("display", "inline");
+    $('body').css("overflow", "auto");
   }else{
       mobileNav.addClass('mobile-nav');
       rhombus.css("display", "none");
+      $('body').css("overflow", "hidden");
 
       //Close nav when the user makes a selection
       $('a').click(function(){
         mobileNav.removeClass('mobile-nav');
         rhombus.css("display", "inline");
+        $('body').css("overflow", "auto");
       });//a element click
   }//else
 }); //Hamburger
