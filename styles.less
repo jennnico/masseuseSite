@@ -37,6 +37,8 @@ body{
   padding: 15px 30px;
   text-decoration: none;
 
+  @media(max-width: @screen-xxs){font-size: 18px;}
+
   &:hover{
     background: darken(@green, 10%);
   }
@@ -80,7 +82,7 @@ body{
   width: 100%;
   z-index: 2;
 
-  @media(max-width: @screen-sm){min-height: 95vh;}
+  //@media(max-width: @screen-sm){min-height: 95vh;}
 
   &.one{
     background-image: url("/birch.jpg");
