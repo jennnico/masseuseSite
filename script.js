@@ -35,24 +35,28 @@ $(document).ready(function() {
 
 //Hamburger
 var mobileNav = $('.nav-items');
-var rhombus = $('.rhombus'); //rhombuses likes to be in the nav
+var rhombus = $('.rhombus');
+var home = $('#home');//main header text
 
 $('.mobile-menu').click(function(){
 
   //toggle mobile nav and rhombuses
   if((mobileNav).hasClass('mobile-nav')){
     mobileNav.removeClass('mobile-nav');
-    rhombus.css("display", "inline");
+    mobileNav.animate({left: "100%"});
+    rhombus.css("display", "block");
     $('body').css("overflow", "auto");
   }else{
       mobileNav.addClass('mobile-nav');
+      mobileNav.animate({left: "0"});
       rhombus.css("display", "none");
       $('body').css("overflow", "hidden");
 
       //Close nav when the user makes a selection
       $('a').click(function(){
         mobileNav.removeClass('mobile-nav');
-        rhombus.css("display", "inline");
+        mobileNav.animate({left: "100%"});
+        rhombus.css("display", "block");
         $('body').css("overflow", "auto");
       });//a element click
   }//else
