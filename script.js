@@ -3,7 +3,6 @@ $(document).ready(function() {
   $(window).scroll(function(){
 
     /*Sticky nav*/
-    var nav = $('.navigation')
     var $this = $(this);
     var headerHeight = $('.parallax.one').outerHeight();
 
@@ -34,28 +33,30 @@ $(document).ready(function() {
 
 
 //Hamburger
-var mobileNav = $('.nav-items');
+var nav = $('.navigation');
+var stickyNav = $('.sticky');
+var mobileNav = $('.navigation__items');
 var rhombus = $('.rhombus');
 var home = $('#home');//main header text
 
-$('.mobile-menu').click(function(){
+$('.navigation__burger').click(function(){
 
   //toggle mobile nav and rhombuses
   if((mobileNav).hasClass('mobile-nav')){
-    mobileNav.removeClass('mobile-nav');
-    mobileNav.animate({left: "100%"});
+    stickyNav.css("height", "auto");
+    mobileNav.removeClass('mobile-nav').animate({right: "-100%"});
     rhombus.css("display", "block");
     $('body').css("overflow", "auto");
   }else{
-      mobileNav.addClass('mobile-nav');
-      mobileNav.animate({left: "0"});
+      stickyNav.css("height", "100%");
+      mobileNav.addClass('mobile-nav').animate({right: "0"});
       rhombus.css("display", "none");
       $('body').css("overflow", "hidden");
 
       //Close nav when the user makes a selection
       $('a').click(function(){
-        mobileNav.removeClass('mobile-nav');
-        mobileNav.animate({left: "100%"});
+        // nav.css("overflow", "hidden");
+        mobileNav.removeClass('mobile-nav').animate({right: "-100%"});
         rhombus.css("display", "block");
         $('body').css("overflow", "auto");
       });//a element click
