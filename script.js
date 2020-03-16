@@ -18,7 +18,6 @@ $(document).ready(function() {
      $('.fade').each( function(i){
 
          var bottom_of_object = $(this).position().top + $(this).outerHeight();
-         //var middle_of_object = $(this).position().top + $(this).outerHeight()/2;
          var middle_of_object = $(this).position().top + 200;
          var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -43,24 +42,33 @@ $('.navigation__burger').click(function(){
 
   //toggle mobile nav and rhombuses
   if((mobileNav).hasClass('mobile-nav')){
-    stickyNav.css("height", "auto");
+
     mobileNav.removeClass('mobile-nav').animate({right: "-100%"});
+    //$('.navigation.sticky').removeClass('sticky--show');//delay this guy
     rhombus.css("display", "block");
     $('body').css("overflow", "auto");
+
+    setTimeout(function () {
+         $('.navigation.sticky').removeClass('sticky--show');
+    }, 300);
+
   }else{
-      stickyNav.css("height", "100%");
+
+      $('.navigation.sticky').addClass('sticky--show');
       mobileNav.addClass('mobile-nav').animate({right: "0"});
       rhombus.css("display", "none");
       $('body').css("overflow", "hidden");
 
       //Close nav when the user makes a selection
       $('a').click(function(){
-        // nav.css("overflow", "hidden");
+        $('.navigation.sticky').removeClass('sticky--show');
         mobileNav.removeClass('mobile-nav').animate({right: "-100%"});
         rhombus.css("display", "block");
         $('body').css("overflow", "auto");
       });//a element click
+
   }//else
+
 }); //Hamburger
 
 
